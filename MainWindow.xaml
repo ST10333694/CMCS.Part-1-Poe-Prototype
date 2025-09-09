@@ -1,0 +1,33 @@
+﻿<Window x:Class="CMCS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CMCS - Contract Monthly Claim System" Height="460" Width="760">
+    <DockPanel LastChildFill="True">
+        <!-- Header -->
+        <Border DockPanel.Dock="Top" Height="64" Background="#2D2D30">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="16,0">
+                    <TextBlock Text="📝 CMCS" FontSize="22" FontWeight="Bold" Foreground="{StaticResource AccentColor}" />
+                    <TextBlock Text="  | Contract Monthly Claim System" FontSize="16" Foreground="White" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Content -->
+        <Grid Background="{StaticResource PrimaryBackground}">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="340">
+                <TextBlock Text="Welcome" FontSize="26" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,18"/>
+                <TextBlock Text="Choose a portal to continue" Foreground="{StaticResource SubtleText}" 
+                           HorizontalAlignment="Center" Margin="0,0,0,22"/>
+                <Button Content="Lecturer Portal" Click="OpenLecturer"/>
+                <Button Content="Coordinator Portal" Click="OpenCoordinator"/>
+                <Button Content="Manager Portal" Click="OpenManager"/>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Window>
